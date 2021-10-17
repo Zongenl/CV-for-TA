@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- Created by pdf2htmlEX (https://github.com/coolwanglu/pdf2htmlex) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="pdf2htmlEX"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<style type="text/css">
+/*! 
+ * Base CSS for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;padding:0;margin:0;overflow:auto}#page-container{position:absolute;top:0;left:0;margin:0;padding:0;border:0}@media screen{#sidebar.opened+#page-container{left:250px}#page-container{bottom:0;right:0;overflow:auto}.loading-indicator{display:none}.loading-indicator.active{display:block;position:absolute;width:64px;height:64px;top:50%;left:50%;margin-top:-32px;margin-left:-32px}.loading-indicator img{position:absolute;top:0;left:0;bottom:0;right:0}}@media print{@page{margin:0}html{margin:0}body{margin:0;-webkit-print-color-adjust:exact}#sidebar{display:none}#page-container{width:auto;height:auto;overflow:visible;background-color:transparent}.d{display:none}}.pf{position:relative;background-color:white;overflow:hidden;margin:0;border:0}.pc{position:absolute;border:0;padding:0;margin:0;top:0;left:0;width:100%;height:100%;overflow:hidden;display:block;transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0}.pc.opened{display:block}.bf{position:absolute;border:0;margin:0;top:0;bottom:0;width:100%;height:100%;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.bi{position:absolute;border:0;margin:0;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}@media print{.pf{margin:0;box-shadow:none;page-break-after:always;page-break-inside:avoid}@-moz-document url-prefix(){.pf{overflow:visible;border:1px solid #fff}.pc{overflow:visible}}}.c{position:absolute;border:0;padding:0;margin:0;overflow:hidden;display:block}.t{position:absolute;white-space:pre;font-size:1px;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%;unicode-bidi:bidi-override;-moz-font-feature-settings:"liga" 0}.t:after{content:''}.t:before{content:'';display:inline-block}.t span{position:relative;unicode-bidi:bidi-override}._{display:inline-block;color:transparent;z-index:-1}::selection{background:rgba(127,255,255,0.4)}::-moz-selection{background:rgba(127,255,255,0.4)}.pi{display:none}.d{position:absolute;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%}.it{border:0;background-color:rgba(255,255,255,0.0)}.ir:hover{cursor:pointer}</style>
+<style type="text/css">
+/*! 
+ * Fancy styles for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */@keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes swing{0{transform:rotate(0)}10%{transform:rotate(0)}90%{transform:rotate(720deg)}100%{transform:rotate(720deg)}}@-webkit-keyframes swing{0{-webkit-transform:rotate(0)}10%{-webkit-transform:rotate(0)}90%{-webkit-transform:rotate(720deg)}100%{-webkit-transform:rotate(720deg)}}@media screen{#sidebar{background-color:#2f3236;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMNCA0Wk00IDBMMCA0WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+")}#outline{font-family:Georgia,Times,"Times New Roman",serif;font-size:13px;margin:2em 1em}#outline ul{padding:0}#outline li{list-style-type:none;margin:1em 0}#outline li>ul{margin-left:1em}#outline a,#outline a:visited,#outline a:hover,#outline a:active{line-height:1.2;color:#e8e8e8;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;display:block;overflow:hidden;outline:0}#outline a:hover{color:#0cf}#page-container{background-color:#9e9e9e;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjOWU5ZTllIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");-webkit-transition:left 500ms;transition:left 500ms}.pf{margin:13px auto;box-shadow:1px 1px 3px 1px #333;border-collapse:separate}.pc.opened{-webkit-animation:fadein 100ms;animation:fadein 100ms}.loading-indicator.active{-webkit-animation:swing 1.5s ease-in-out .01s infinite alternate none;animation:swing 1.5s ease-in-out .01s infinite alternate none}.checked{background:no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goQDSYgDiGofgAAAslJREFUOMvtlM9LFGEYx7/vvOPM6ywuuyPFihWFBUsdNnA6KLIh+QPx4KWExULdHQ/9A9EfUodYmATDYg/iRewQzklFWxcEBcGgEplDkDtI6sw4PzrIbrOuedBb9MALD7zv+3m+z4/3Bf7bZS2bzQIAcrmcMDExcTeXy10DAFVVAQDksgFUVZ1ljD3yfd+0LOuFpmnvVVW9GHhkZAQcxwkNDQ2FSCQyRMgJxnVdy7KstKZpn7nwha6urqqfTqfPBAJAuVymlNLXoigOhfd5nmeiKL5TVTV+lmIKwAOA7u5u6Lped2BsbOwjY6yf4zgQQkAIAcedaPR9H67r3uYBQFEUFItFtLe332lpaVkUBOHK3t5eRtf1DwAwODiIubk5DA8PM8bYW1EU+wEgCIJqsCAIQAiB7/u253k2BQDDMJBKpa4mEon5eDx+UxAESJL0uK2t7XosFlvSdf0QAEmlUnlRFJ9Waho2Qghc1/U9z3uWz+eX+Wr+lL6SZfleEAQIggA8z6OpqSknimIvYyybSCReMsZ6TislhCAIAti2Dc/zejVNWwCAavN8339j27YbTg0AGGM3WltbP4WhlRWq6Q/btrs1TVsYHx+vNgqKoqBUKn2NRqPFxsbGJzzP05puUlpt0ukyOI6z7zjOwNTU1OLo6CgmJyf/gA3DgKIoWF1d/cIY24/FYgOU0pp0z/Ityzo8Pj5OTk9PbwHA+vp6zWghDC+VSiuRSOQgGo32UErJ38CO42wdHR09LBQK3zKZDDY2NupmFmF4R0cHVlZWlmRZ/iVJUn9FeWWcCCE4ODjYtG27Z2Zm5juAOmgdGAB2d3cBADs7O8uSJN2SZfl+WKlpmpumaT6Yn58vn/fs6XmbhmHMNjc3tzDGFI7jYJrm5vb29sDa2trPC/9aiqJUy5pOp4f6+vqeJ5PJBAB0dnZe/t8NBajx/z37Df5OGX8d13xzAAAAAElFTkSuQmCC)}}</style>
+<style type="text/css">
+.ff0{font-family:sans-serif;visibility:hidden;}
+@font-face{font-family:ff1;src:url(f1.woff)format("woff");}.ff1{font-family:ff1;line-height:0.972168;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url(f2.woff)format("woff");}.ff2{font-family:ff2;line-height:0.972168;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff3;src:url(f3.woff)format("woff");}.ff3{font-family:ff3;line-height:0.910156;font-style:normal;font-weight:normal;visibility:visible;}
+.ff4{font-family:ArialMT,monospace;font-weight:normal;font-style:normal;line-height:1.364258;visibility:visible;}
+@font-face{font-family:ff5;src:url(f5.woff)format("woff");}.ff5{font-family:ff5;line-height:1.035156;font-style:normal;font-weight:normal;visibility:visible;}
+.m2{transform:matrix(0.243243,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.243243,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.243243,0.000000,0.000000,0.250000,0,0);}
+.m1{transform:matrix(0.245000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.245000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.245000,0.000000,0.000000,0.250000,0,0);}
+.m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
+.m3{transform:none;-ms-transform:none;-webkit-transform:none;}
+.v0{vertical-align:0.000000px;}
+.ls2{letter-spacing:-0.960000px;}
+.lse{letter-spacing:-0.488000px;}
+.ls4{letter-spacing:-0.480000px;}
+.ls7{letter-spacing:-0.408000px;}
+.lsc{letter-spacing:-0.378400px;}
+.ls8{letter-spacing:-0.305200px;}
+.lsd{letter-spacing:-0.276400px;}
+.lsa{letter-spacing:-0.203600px;}
+.ls9{letter-spacing:-0.072800px;}
+.ls1{letter-spacing:-0.024000px;}
+.ls0{letter-spacing:0.000000px;}
+.ls6{letter-spacing:0.072800px;}
+.ls3{letter-spacing:0.101600px;}
+.lsb{letter-spacing:0.174800px;}
+.ls5{letter-spacing:0.203600px;}
+.sc_{text-shadow:none;}
+.sc1{text-shadow:-0.015em 0 rgb(0,0,0),0 0.015em rgb(0,0,0),0.015em 0 rgb(0,0,0),0 -0.015em  rgb(0,0,0);}
+.sc0{text-shadow:-0.015em 0 transparent,0 0.015em transparent,0.015em 0 transparent,0 -0.015em  transparent;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sc_{-webkit-text-stroke:0px transparent;}
+.sc1{-webkit-text-stroke:0.015em rgb(0,0,0);text-shadow:none;}
+.sc0{-webkit-text-stroke:0.015em transparent;text-shadow:none;}
+}
+.ws0{word-spacing:0.000000px;}
+._0{margin-left:-1.008000px;}
+._1{width:1.592000px;}
+._d{width:271.400960px;}
+._9{width:294.720000px;}
+._f{width:377.973440px;}
+._e{width:439.260160px;}
+._8{width:445.979200px;}
+._3{width:513.901120px;}
+._b{width:727.097920px;}
+._a{width:734.605120px;}
+._10{width:785.734720px;}
+._c{width:802.741760px;}
+._7{width:895.927680px;}
+._2{width:980.378560px;}
+._6{width:1047.766720px;}
+._5{width:1114.095040px;}
+._4{width:1222.162240px;}
+.fc1{color:rgb(0,0,255);}
+.fc0{color:rgb(0,0,0);}
+.fs4{font-size:25.920000px;}
+.fs0{font-size:36.000000px;}
+.fs3{font-size:39.840000px;}
+.fs5{font-size:44.160000px;}
+.fs2{font-size:56.160000px;}
+.fs1{font-size:63.840000px;}
+.y1{bottom:0.000000px;}
+.y37{bottom:17.160000px;}
+.y36{bottom:30.864000px;}
+.y35{bottom:44.424000px;}
+.y34{bottom:54.744000px;}
+.y0{bottom:57.500000px;}
+.y33{bottom:68.664000px;}
+.y32{bottom:82.224000px;}
+.y31{bottom:93.504000px;}
+.y30{bottom:108.620000px;}
+.y2f{bottom:121.340000px;}
+.y2e{bottom:134.060000px;}
+.y2d{bottom:146.780000px;}
+.y2c{bottom:159.500000px;}
+.y2b{bottom:173.180000px;}
+.y2a{bottom:186.860000px;}
+.y29{bottom:200.450000px;}
+.y28{bottom:213.890000px;}
+.y27{bottom:222.770000px;}
+.y26{bottom:238.610000px;}
+.y25{bottom:252.170000px;}
+.y24{bottom:265.850000px;}
+.y23{bottom:279.290000px;}
+.y22{bottom:292.970000px;}
+.y21{bottom:306.410000px;}
+.y20{bottom:320.090000px;}
+.y1f{bottom:333.650000px;}
+.y1e{bottom:347.450000px;}
+.y1d{bottom:361.130000px;}
+.y1c{bottom:374.830000px;}
+.y1b{bottom:389.230000px;}
+.y1a{bottom:402.790000px;}
+.y19{bottom:417.310000px;}
+.y18{bottom:430.750000px;}
+.y17{bottom:443.590000px;}
+.y16{bottom:456.310000px;}
+.y15{bottom:469.030000px;}
+.y14{bottom:481.750000px;}
+.y13{bottom:495.430000px;}
+.y12{bottom:509.110000px;}
+.y11{bottom:522.790000px;}
+.y46{bottom:525.190000px;}
+.y10{bottom:536.110000px;}
+.y45{bottom:537.910000px;}
+.yf{bottom:547.180000px;}
+.y44{bottom:552.220000px;}
+.ye{bottom:558.460000px;}
+.y43{bottom:565.900000px;}
+.yd{bottom:571.180000px;}
+.y42{bottom:579.460000px;}
+.yc{bottom:585.580000px;}
+.y41{bottom:589.780000px;}
+.y38{bottom:592.500000px;}
+.yb{bottom:599.260000px;}
+.y40{bottom:604.900000px;}
+.ya{bottom:613.660000px;}
+.y3f{bottom:618.580000px;}
+.y9{bottom:627.460000px;}
+.y3e{bottom:632.260000px;}
+.y8{bottom:640.900000px;}
+.y3d{bottom:645.820000px;}
+.y7{bottom:653.260000px;}
+.y3c{bottom:658.300000px;}
+.y6{bottom:663.580000px;}
+.y5{bottom:671.860000px;}
+.y3b{bottom:671.980000px;}
+.y4{bottom:685.540000px;}
+.y3a{bottom:699.100000px;}
+.y3{bottom:705.100000px;}
+.y39{bottom:712.800000px;}
+.y2{bottom:748.560000px;}
+.ha{height:1.500000px;}
+.h6{height:19.604531px;}
+.h2{height:27.228516px;}
+.h8{height:27.662344px;}
+.h5{height:30.132891px;}
+.h7{height:33.400312px;}
+.h9{height:41.415703px;}
+.h4{height:42.476484px;}
+.hb{height:45.216562px;}
+.h3{height:48.285234px;}
+.h1{height:613.000000px;}
+.h0{height:792.000000px;}
+.w3{width:462.000000px;}
+.w1{width:468.000000px;}
+.w2{width:611.999991px;}
+.w0{width:612.000000px;}
+.x1{left:0.000009px;}
+.x0{left:72.000000px;}
+.x2{left:78.023991px;}
+.x4{left:82.343991px;}
+.x5{left:86.903991px;}
+.x6{left:91.463991px;}
+.x7{left:531.339991px;}
+.x3{left:540.099991px;}
+@media print{
+.v0{vertical-align:0.000000pt;}
+.ls2{letter-spacing:-1.280000pt;}
+.lse{letter-spacing:-0.650667pt;}
+.ls4{letter-spacing:-0.640000pt;}
+.ls7{letter-spacing:-0.544000pt;}
+.lsc{letter-spacing:-0.504533pt;}
+.ls8{letter-spacing:-0.406933pt;}
+.lsd{letter-spacing:-0.368533pt;}
+.lsa{letter-spacing:-0.271467pt;}
+.ls9{letter-spacing:-0.097067pt;}
+.ls1{letter-spacing:-0.032000pt;}
+.ls0{letter-spacing:0.000000pt;}
+.ls6{letter-spacing:0.097067pt;}
+.ls3{letter-spacing:0.135467pt;}
+.lsb{letter-spacing:0.233067pt;}
+.ls5{letter-spacing:0.271467pt;}
+.ws0{word-spacing:0.000000pt;}
+._0{margin-left:-1.344000pt;}
+._1{width:2.122667pt;}
+._d{width:361.867947pt;}
+._9{width:392.960000pt;}
+._f{width:503.964587pt;}
+._e{width:585.680213pt;}
+._8{width:594.638933pt;}
+._3{width:685.201493pt;}
+._b{width:969.463893pt;}
+._a{width:979.473493pt;}
+._10{width:1047.646293pt;}
+._c{width:1070.322347pt;}
+._7{width:1194.570240pt;}
+._2{width:1307.171413pt;}
+._6{width:1397.022293pt;}
+._5{width:1485.460053pt;}
+._4{width:1629.549653pt;}
+.fs4{font-size:34.560000pt;}
+.fs0{font-size:48.000000pt;}
+.fs3{font-size:53.120000pt;}
+.fs5{font-size:58.880000pt;}
+.fs2{font-size:74.880000pt;}
+.fs1{font-size:85.120000pt;}
+.y1{bottom:0.000000pt;}
+.y37{bottom:22.880000pt;}
+.y36{bottom:41.152000pt;}
+.y35{bottom:59.232000pt;}
+.y34{bottom:72.992000pt;}
+.y0{bottom:76.666667pt;}
+.y33{bottom:91.552000pt;}
+.y32{bottom:109.632000pt;}
+.y31{bottom:124.672000pt;}
+.y30{bottom:144.826667pt;}
+.y2f{bottom:161.786667pt;}
+.y2e{bottom:178.746667pt;}
+.y2d{bottom:195.706667pt;}
+.y2c{bottom:212.666667pt;}
+.y2b{bottom:230.906667pt;}
+.y2a{bottom:249.146667pt;}
+.y29{bottom:267.266667pt;}
+.y28{bottom:285.186667pt;}
+.y27{bottom:297.026667pt;}
+.y26{bottom:318.146667pt;}
+.y25{bottom:336.226667pt;}
+.y24{bottom:354.466667pt;}
+.y23{bottom:372.386667pt;}
+.y22{bottom:390.626667pt;}
+.y21{bottom:408.546667pt;}
+.y20{bottom:426.786667pt;}
+.y1f{bottom:444.866667pt;}
+.y1e{bottom:463.266667pt;}
+.y1d{bottom:481.506667pt;}
+.y1c{bottom:499.773333pt;}
+.y1b{bottom:518.973333pt;}
+.y1a{bottom:537.053333pt;}
+.y19{bottom:556.413333pt;}
+.y18{bottom:574.333333pt;}
+.y17{bottom:591.453333pt;}
+.y16{bottom:608.413333pt;}
+.y15{bottom:625.373333pt;}
+.y14{bottom:642.333333pt;}
+.y13{bottom:660.573333pt;}
+.y12{bottom:678.813333pt;}
+.y11{bottom:697.053333pt;}
+.y46{bottom:700.253333pt;}
+.y10{bottom:714.813333pt;}
+.y45{bottom:717.213333pt;}
+.yf{bottom:729.573333pt;}
+.y44{bottom:736.293333pt;}
+.ye{bottom:744.613333pt;}
+.y43{bottom:754.533333pt;}
+.yd{bottom:761.573333pt;}
+.y42{bottom:772.613333pt;}
+.yc{bottom:780.773333pt;}
+.y41{bottom:786.373333pt;}
+.y38{bottom:790.000000pt;}
+.yb{bottom:799.013333pt;}
+.y40{bottom:806.533333pt;}
+.ya{bottom:818.213333pt;}
+.y3f{bottom:824.773333pt;}
+.y9{bottom:836.613333pt;}
+.y3e{bottom:843.013333pt;}
+.y8{bottom:854.533333pt;}
+.y3d{bottom:861.093333pt;}
+.y7{bottom:871.013333pt;}
+.y3c{bottom:877.733333pt;}
+.y6{bottom:884.773333pt;}
+.y5{bottom:895.813333pt;}
+.y3b{bottom:895.973333pt;}
+.y4{bottom:914.053333pt;}
+.y3a{bottom:932.133333pt;}
+.y3{bottom:940.133333pt;}
+.y39{bottom:950.400000pt;}
+.y2{bottom:998.080000pt;}
+.ha{height:2.000000pt;}
+.h6{height:26.139375pt;}
+.h2{height:36.304688pt;}
+.h8{height:36.883125pt;}
+.h5{height:40.177188pt;}
+.h7{height:44.533750pt;}
+.h9{height:55.220937pt;}
+.h4{height:56.635312pt;}
+.hb{height:60.288750pt;}
+.h3{height:64.380313pt;}
+.h1{height:817.333333pt;}
+.h0{height:1056.000000pt;}
+.w3{width:616.000000pt;}
+.w1{width:624.000000pt;}
+.w2{width:815.999988pt;}
+.w0{width:816.000000pt;}
+.x1{left:0.000012pt;}
+.x0{left:96.000000pt;}
+.x2{left:104.031988pt;}
+.x4{left:109.791988pt;}
+.x5{left:115.871988pt;}
+.x6{left:121.951988pt;}
+.x7{left:708.453321pt;}
+.x3{left:720.133321pt;}
+}
+</style>
+<script src="compatibility.min.js"></script>
+<script src="pdf2htmlEX.min.js"></script>
+<script>
+try{
+pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+</div>
+</div>
+<div id="page-container">
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg1.png"/><div class="c x1 y1 w2 h0"><div class="t m0 x0 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                  <span class="_ _0"></span>               <span class="_ _1"></span>                           <span class="_ _0"></span>                            <span class="_ _0"></span>           <span class="_ _1"></span>                                                  <span class="_ _1"></span>               <span class="_ _0"></span>             </div><div class="t m0 x2 h3 y3 ff1 fs1 fc0 sc1 ls0 ws0">Curriculum<span class="_ _1"></span> Vitae<span class="fs2">      </span></div><div class="t m0 x2 h4 y4 ff1 fs2 fc0 sc1 ls0 ws0">ZONGEN LI </div><div class="t m0 x2 h5 y5 ff1 fs3 fc0 sc0 ls0 ws0">Atlanta the United<span class="_ _1"></span> States <span class="ff2 ls1">• </span><span class="fc1">zongenl@g<span class="_ _1"></span>atech.edu </span><span class="ff2 ls1">• </span>+1 404<span class="_ _1"></span>2478877 </div><div class="t m0 x0 h6 y6 ff1 fs4 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h5 y7 ff1 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h7 y8 ff1 fs5 fc0 sc0 ls0 ws0">EDUCATION </div><div class="t m0 x2 h7 y9 ff1 fs5 fc0 sc1 ls0 ws0">Georgia Institute of Techno<span class="_ _0"></span>logy <span class="_ _2"> </span><span class="sc0">Atlanta </span></div><div class="t m0 x2 h7 ya ff1 fs5 fc0 sc0 ls0 ws0">Mater of Science, C<span class="_ _0"></span>omputa<span class="_ _0"></span>tional Science and Eng<span class="_ _0"></span>ineering <span class="_ _3"> </span>Dec <span class="ls2">2022</span> </div><div class="t m0 x2 h7 yb ff1 fs5 fc0 sc1 ls0 ws0">Tianjin University <span class="_ _4"> </span><span class="sc0">Tianjin, China </span></div><div class="t m0 x2 h7 yc ff1 fs5 fc0 sc0 ls0 ws0">Bachelor of Engine<span class="_ _0"></span>ering <span class="_ _5"> </span>Jun <span class="ls2">202</span>0 </div><div class="t m0 x2 h7 yd ff1 fs5 fc0 sc0 ls0 ws0">Related Courses: Co<span class="_ _0"></span>mputer<span class="_ _0"></span> Networks, Computat<span class="_ _0"></span>ional Science Al<span class="_ _0"></span>gorithm, Intro <span class="_ _0"></span>to Database, </div><div class="t m0 x2 h7 ye ff1 fs5 fc0 sc0 ls0 ws0">Computational d<span class="_ _0"></span>ata analysis<span class="sc1"> <span class="_ _6"> </span></span> </div><div class="t m0 x3 h7 yf ff1 fs5 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h7 y10 ff1 fs5 fc0 sc0 ls0 ws0">PROJECT EX<span class="_ _0"></span>PERIENCE </div><div class="t m0 x2 h7 y11 ff1 fs5 fc0 sc1 ls0 ws0">Education System App (<span class="_ _0"></span><span class="ls3">Ja<span class="ls4">va<span class="ls0"> Spring) <span class="_ _7"> </span><span class="sc0">2021/08 </span></span></span></span></div><div class="t m0 x2 h7 y12 ff1 fs5 fc0 sc0 ls0 ws0">Project: With Java Sp<span class="_ _0"></span>ring, const<span class="_ _0"></span>ruct an education <span class="_ _0"></span>system wh<span class="_ _0"></span>ich can add, dele<span class="_ _0"></span>te, update and sea<span class="_ _0"></span>rch </div><div class="t m0 x2 h7 y13 ff1 fs5 fc0 sc0 ls0 ws0">student informa<span class="_ _0"></span>tion and class info<span class="_ _0"></span>rmation.  </div><div class="t m1 x4 h8 y14 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y14 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y14 ff1 fs5 fc0 sc0 ls0 ws0">By using the dependen<span class="_ _0"></span>cy in<span class="_ _0"></span>jection and MVC, crea<span class="_ _0"></span>te a controller to<span class="_ _0"></span> update student<span class="_ _0"></span> and class </div><div class="t m0 x6 h7 y15 ff1 fs5 fc0 sc0 ls0 ws0">information w<span class="_ _0"></span>ith Spring and build co<span class="_ _0"></span>nnections betwe<span class="_ _0"></span>en Java Spring f<span class="_ _0"></span>ile and MySQ<span class="_ _0"></span>L database with </div><div class="t m0 x6 h7 y16 ff1 fs5 fc0 sc0 ls0 ws0">JPA, implement <span class="_ _0"></span>the function of ad<span class="_ _0"></span>ding and delet<span class="_ _0"></span>ing student infor<span class="_ _0"></span>mation and ge<span class="ls5">t <span class="_ _0"></span><span class="ls0">correspond<span class="_ _0"></span>ing </span></span></div><div class="t m0 x6 h7 y17 ff1 fs5 fc0 sc0 ls0 ws0">updates in MySQL <span class="_ _0"></span>database. </div><div class="t m1 x4 h8 y18 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y18 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y18 ff1 fs5 fc0 sc0 ls0 ws0">With MyBatis3 fra<span class="_ _0"></span>mework<span class="ls4">, </span>build the Java class and m<span class="_ _0"></span>ethods and c<span class="_ _0"></span>onnects the<span class="ls5">m <span class="_ _0"></span><span class="ls0">to <span class="ls3">My</span>SQ<span class="_ _0"></span>L </span></span></div><div class="t m0 x6 h7 y19 ff1 fs5 fc0 sc0 ls0 ws0">senten<span class="ls6">ce</span> which i<span class="_ _0"></span>mplements the <span class="_ _0"></span>function of sea<span class="_ _0"></span>rching the studen<span class="_ _0"></span>t and class in<span class="_ _0"></span>formation. </div><div class="t m1 x4 h8 y1a ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y1a ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y1a ff1 fs5 fc0 sc0 ls0 ws0">Use Apache Shiro <span class="_ _0"></span>framework <span class="ls5">to</span> <span class="_ _0"></span>perform admin<span class="_ _0"></span>istrator authe<span class="_ _0"></span>ntication, info<span class="_ _0"></span>rmation updating </div><div class="t m0 x6 h7 y1b ff1 fs5 fc0 sc0 ls0 ws0">authorization, use<span class="_ _0"></span>r password log in syst<span class="_ _0"></span>em and session<span class="_ _0"></span> management. </div><div class="t m0 x2 h7 y1c ff1 fs5 fc0 sc1 ls0 ws0">Keeper App (JavaScript Re<span class="_ _0"></span>act, HTML, CSS) <span class="_ _8"> </span> <span class="_ _9"> </span><span class="sc0">2021/09 </span></div><div class="t m0 x2 h7 y1d ff1 fs5 fc0 sc0 ls0 ws0">Project: With Rea<span class="_ _0"></span>ct in JavaScript, b<span class="_ _0"></span>uild the front-<span class="ls7">en</span>ded part of K<span class="_ _0"></span>eeper App, wh<span class="_ _0"></span>ich can add and de<span class="_ _0"></span>lete </div><div class="t m0 x2 h7 y1e ff1 fs5 fc0 sc0 ls0 ws0">notes by use<span class="ls8">rs</span> like Google keepe<span class="_ _0"></span>r app.  </div><div class="t m1 x4 h8 y1f ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y1f ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y1f ff1 fs5 fc0 sc0 ls0 ws0">U<span class="ls3">se </span>React co<span class="_ _0"></span>mponents to b<span class="_ _0"></span>uild th<span class="ls7">e </span>main part of the app lik<span class="_ _0"></span>e Footer, Head<span class="_ _0"></span>er, No<span class="ls5">te</span> and con<span class="_ _0"></span>nects the </div><div class="t m0 x6 h7 y20 ff1 fs5 fc0 sc0 ls0 ws0">J<span class="ls9">SX</span> components to <span class="_ _0"></span>the <span class="ls3">JS</span> files.<span class="_ _0"></span> </div><div class="t m1 x4 h8 y21 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y21 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y21 ff1 fs5 fc0 sc0 ls0 ws0">Build the outline o<span class="_ _0"></span>f the we<span class="_ _0"></span>bsite by using p<span class="ls8">ro</span>ps, mapping co<span class="_ _0"></span>mponents and <span class="ls3">Ja</span>vaS<span class="_ _0"></span>cript ES6 ar<span class="_ _0"></span>ro<span class="lsa">w </span></div><div class="t m0 x6 h7 y22 ff1 fs5 fc0 sc0 ls0 ws0">functions. </div><div class="t m1 x4 h8 y23 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y23 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y23 ff1 fs5 fc0 sc0 ls0 ws0">Use <span class="lsb">fu</span>nctions <span class="_ _0"></span>like hooks, <span class="lsc">Ja</span>vaScript ES6 spread op<span class="_ _0"></span>erator, managing co<span class="_ _0"></span>mponen<span class="_ _0"></span>ts tree to imple<span class="_ _0"></span>ment </div><div class="t m0 x6 h7 y24 ff1 fs5 fc0 sc0 ls0 ws0">the adding and del<span class="_ _0"></span>eting notes funct<span class="_ _0"></span>ion of the Keeper<span class="_ _0"></span> app. </div><div class="t m1 x4 h8 y25 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y25 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y25 ff1 fs5 fc0 sc0 ls0 ws0">S<span class="ls5">ty</span>le the webs<span class="_ _0"></span>ite like the h<span class="_ _0"></span>eader, paragraph <span class="_ _0"></span>and footer forma<span class="_ _0"></span>t by using CSS and <span class="_ _0"></span>link the CSS fi<span class="_ _0"></span>le </div><div class="t m0 x6 h7 y26 ff1 fs5 fc0 sc0 ls0 ws0">to the HTML file.<span class="_ _0"></span> </div><div class="t m0 x3 h7 y27 ff1 fs5 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h7 y28 ff1 fs5 fc0 sc0 ls0 ws0">PROFESSION<span class="_ _0"></span>AL EXPERIEN<span class="_ _0"></span>CE </div><div class="t m0 x2 h7 y29 ff1 fs5 fc0 sc1 ls0 ws0">China Architecture Design <span class="_ _0"></span>&amp; Research Group <span class="_ _a"> </span><span class="sc0">Beijing, China </span></div><div class="t m0 x2 h7 y2a ff1 fs5 fc0 sc0 ls0 ws0">Intern   <span class="sc1">                                <span class="_ _0"></span>                               <span class="_ _b"> </span><span class="sc0">2020</span> </span></div><div class="t m0 x2 h7 y2b ff1 fs5 fc0 sc0 ls0 ws0">Project: Xianyang A<span class="_ _0"></span>irport Pha<span class="ls3">se <span class="_ _0"></span><span class="ff2 ls0">III Expansi<span class="_ _0"></span>on Project, w<span class="_ _0"></span>hich located in X<span class="_ _0"></span>i’an<span class="ff1">, Shanxi Prov<span class="_ _0"></span>ince. </span></span></span></div><div class="t m1 x4 h8 y2c ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y2c ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y2c ff1 fs5 fc0 sc0 ls0 ws0">Used Python to dev<span class="_ _0"></span>elop a program by w<span class="_ _0"></span>hich users can <span class="_ _0"></span>convert the mod<span class="_ _0"></span>el file format in Sap2<span class="_ _0"></span>000 to </div><div class="t m0 x6 h7 y2d ff1 fs5 fc0 sc0 ls0 ws0">the corresponding m<span class="_ _0"></span>odel file in Abaqus a<span class="_ _0"></span>nd improve<span class="_ _0"></span>d the work effic<span class="_ _0"></span>iency by avoiding bu<span class="_ _0"></span>ilding </div><div class="t m0 x6 h7 y2e ff1 fs5 fc0 sc0 ls0 ws0">models in Abaqus.  <span class="_ _0"></span> </div><div class="t m1 x4 h8 y2f ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y2f ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y2f ff1 fs5 fc0 sc0 ls0 ws0">Create a set of <span class="_ _0"></span>modules in A<span class="_ _0"></span>baqus by paramet<span class="_ _0"></span>erizing several of the<span class="_ _0"></span>m in the progr<span class="_ _0"></span>am and conducted </div><div class="t m0 x6 h7 y30 ff1 fs5 fc0 sc0 ls0 ws0">the steel struc<span class="_ _0"></span>ture analysis w<span class="_ _0"></span>ith the model <span class="_ _0"></span>in Abaqus. </div><div class="t m0 x7 h7 y31 ff1 fs5 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h7 y32 ff1 fs5 fc0 sc0 ls0 ws0">SKILLS<span class="sc1"> </span></div><div class="t m0 x2 h7 y33 ff1 fs5 fc0 sc1 ls0 ws0">Programming<span class="sc0 lsd">: <span class="ls0">Java(proficient), Pyt<span class="_ _0"></span>hon, MySQL, C<span class="_ _0"></span>++, C, JavaScr<span class="_ _0"></span>ipt, CSS, HTM<span class="_ _0"></span>L </span></span></div><div class="t m0 x3 h7 y34 ff1 fs5 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h7 y35 ff1 fs5 fc0 sc0 ls0 ws0">LEADERSH<span class="_ _0"></span>IP AND AC<span class="_ _0"></span>TIVITIES </div><div class="t m0 x2 h7 y36 ff1 fs5 fc0 sc1 ls0 ws0">Monitor of Class 1602<span class="sc0">, <span class="_ _1"></span>T<span class="_ _0"></span>ianjin University <span class="_ _c"> </span>2017 - 2020 </span></div><div class="t m1 x4 h8 y37 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y37 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y37 ff1 fs5 fc0 sc0 ls0 ws0">Founded a review <span class="_ _0"></span>club that, befo<span class="_ _0"></span>re each exa<span class="_ _0"></span>mination week, gu<span class="_ _0"></span>ided class<span class="_ _0"></span>mates thro<span class="_ _0"></span>ugh key points </div></div><a class="l" href="mailto:zongenl@gatech.edu"><div class="d m3" style="border-style:none;position:absolute;left:184.500000px;bottom:669.720000px;width:90.900000px;height:12.680000px;background-color:rgba(255,255,255,0.000001);"></div></a></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><img class="bi x2 y38 w3 ha" alt="" src="bg2.png"/><div class="c x1 y1 w2 h0"><div class="t m0 x0 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">                                  <span class="_ _0"></span>               <span class="_ _1"></span>                           <span class="_ _0"></span>                            <span class="_ _0"></span>           <span class="_ _1"></span>                                                  <span class="_ _1"></span>               <span class="_ _0"></span>             </div><div class="t m0 x6 h7 y39 ff1 fs5 fc0 sc0 ls0 ws0">and conceptua<span class="_ _0"></span>l challenges <span class="_ _0"></span>and led to an aver<span class="_ _0"></span>age GPA imp<span class="_ _0"></span>rovement. </div><div class="t m1 x4 h8 y3a ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y3a ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y3a ff1 fs5 fc0 sc0 ls0 ws0">Organized collec<span class="_ _0"></span>tive activit<span class="_ _0"></span>ies including v<span class="_ _0"></span>isiting muse<span class="_ _0"></span>ums and volun<span class="_ _0"></span>teering to ta<span class="_ _0"></span>ke care of the </div><div class="t m0 x6 h7 y4 ff1 fs5 fc0 sc0 ls0 ws0">elder in nursing ho<span class="_ _0"></span>me. </div><div class="t m1 x4 h8 y3b ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y3b ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y3b ff1 fs5 fc0 sc0 ls0 ws0">Represented the c<span class="_ _0"></span>lass to tak<span class="_ _0"></span>e part in the Exc<span class="_ _0"></span>ellent Leag<span class="_ _0"></span>ue Branch Co<span class="_ _0"></span>mpetition of <span class="_ _0"></span>Qiushi </div><div class="t m0 x6 h7 y3c ff1 fs5 fc0 sc0 ls0 ws0">College and won s<span class="_ _0"></span>econd pri<span class="_ _0"></span>ze. </div><div class="t m0 x2 h7 y3d ff1 fs5 fc0 sc1 ls0 ws0">Minister of Student Un<span class="_ _0"></span>ion of Qiushi Honors Col<span class="_ _0"></span>lege, <span class="_ _1"></span><span class="sc0">Tianjin University <span class="_ _d"> </span>2017 </span></div><div class="t m1 x4 h8 y3e ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y3e ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y3e ff1 fs5 fc0 sc0 ls0 ws0">Organized the fr<span class="_ _0"></span>eshman ori<span class="_ _0"></span>entation in which 120 p<span class="_ _0"></span>eople at<span class="_ _0"></span>tended to help f<span class="_ _0"></span>reshmen in t<span class="_ _0"></span>he Student </div><div class="t m0 x6 h7 y3f ff1 fs5 fc0 sc0 ls0 ws0">Union to get fam<span class="_ _0"></span>iliar with each o<span class="_ _0"></span>ther and w<span class="_ _0"></span>ith their res<span class="_ _0"></span>ponsibilities. </div><div class="t m1 x4 h8 y40 ff3 fs3 fc0 sc0 ls0 ws0">•</div><div class="t m2 x5 h9 y40 ff4 fs3 fc0 sc0 ls0 ws0"> </div><div class="t m0 x6 h7 y40 ff1 fs5 fc0 sc0 ls0 ws0">Organized the we<span class="_ _0"></span>ekly meet<span class="_ _0"></span>ing of the Studen<span class="_ _0"></span>t <span class="_ _0"></span>Union. </div><div class="t m0 x3 h7 y41 ff1 fs5 fc0 sc0 ls0 ws0"> </div><div class="t m0 x2 h7 y42 ff1 fs5 fc0 sc0 ls0 ws0">AWARDS A<span class="_ _0"></span>ND HONOR<span class="_ _0"></span>S </div><div class="t m0 x2 h7 y43 ff1 fs5 fc0 sc1 ls0 ws0">Silver Prize<span class="sc0">, Nationa<span class="_ _0"></span>l Hydraulic BIM <span class="_ _0"></span>Applica<span class="_ _0"></span>tion Compe<span class="_ _0"></span>tition<span class="fs3"> <span class="_ _e"> </span></span>2019<span class="fs3"> </span></span></div><div class="t m0 x2 hb y44 ff1 fs5 fc0 sc1 ls0 ws0">Honor of <span class="ff5 sc0">“</span>Outstanding Stu<span class="_ _0"></span>dent Cadres<span class="ff5 sc0 lse">” </span>(10%), <span class="sc0">Tianjin University <span class="_ _f"> </span>2017 </span></div><div class="t m0 x2 h7 y45 ff1 fs5 fc0 sc1 ls0 ws0">S Prize<span class="sc0">, Mathematica<span class="_ _0"></span>l Contest in Mod<span class="_ _0"></span>eling <span class="_ _10"> </span>2017 </span></div><div class="t m0 x2 h5 y46 ff1 fs3 fc0 sc0 ls0 ws0"> </div></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+<img alt="" src="pdf2htmlEX-64x64.png"/>
+</div>
+</body>
+</html>
